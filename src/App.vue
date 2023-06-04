@@ -1,30 +1,22 @@
 <!--
  * @Author: liuxintao
- * @Date: 2023-05-27 09:16:25
+ * @Date: 2023-06-04 12:02:33
  * @LastEditors: liuxintao
- * @LastEditTime: 2023-06-04 09:35:27
+ * @LastEditTime: 2023-06-04 15:43:29
  * @FilePath: /vue_vite/src/App.vue
- * @Description: 
+ * @Description: 最外层组件
 -->
 <template>
   <div>
     <h1>App</h1>
+    <svg-icon name="call" color="red"></svg-icon>
   </div>
 </template>
 
-<script setup lang="ts">
-for (let i = 0; i < 5; i++) {
+<script setup lang="ts"></script>
 
-
-  console.log(i);
+<style scoped lang="scss">
+h1 {
+  color: $color;
 }
-const fn = () => {
-
-
-  console.log('heihei');
-}
-
-fn();
-</script>
-
-<style scoped lang="scss"></style>
+</style>
