@@ -18,7 +18,11 @@
             <el-input :prefix-icon="User" :model="form.userName"></el-input>
           </el-form-item>
           <el-form-item props="passWord">
-            <el-input type="passwod" :prefix-icon="Lock" v-model="form.passWord"></el-input>
+            <el-input
+              type="passwod"
+              :prefix-icon="Lock"
+              v-model="form.passWord"
+            ></el-input>
           </el-form-item>
           <el-form-item>
             <el-button type="primary" class="login_btn">登录</el-button>
