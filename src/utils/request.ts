@@ -52,7 +52,7 @@ request.interceptors.response.use(
       message,
     })
     return Promise.reject(err)
-  },
+  }
 )
 
 export default request
