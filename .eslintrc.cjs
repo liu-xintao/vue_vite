@@ -2,7 +2,7 @@
  * @Author: liuxintao
  * @Date: 2023-05-27 09:30:12
  * @LastEditors: liuxintao
- * @LastEditTime: 2023-06-04 07:47:33
+ * @LastEditTime: 2023-07-09 21:42:19
  * @FilePath: /vue_vite/.eslintrc.cjs
  * @Description:
  */
@@ -59,6 +59,6 @@ module.exports = {
     'vue/multi-word-component-names': 'off', // vue组件命名统一为“-”连接的单词
     'vue/script-setup-uses-vars': 'error', // Prevent <script setup> variables used in <template> to be marked as unused
     'vue/no-mutating-props': 'off', // 防止在组件中修改传递的 props 值
-    'vue/attribute-hyphenation': 'off', // 在模板中的自定义组件上强制执行属性命名样式
+    // 'vue/attribute-hyphenation': 'off', // 在模板中的自定义组件上强制执行属性命名样式
   },
 }

@@ -25,6 +25,7 @@
     "axios": "^1.4.0",
     "element-plus": "^2.3.5",
     "esbuild": "^0.17.19",
+    "pinia": "^2.1.4",
     "vue": "^3.2.47",
     "vue-router": "^4.2.2",
     "webpack": "^5.84.1"

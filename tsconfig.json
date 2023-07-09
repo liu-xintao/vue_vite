@@ -2,13 +2,21 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
-    "types": ["vue"],
+    "types": [
+      "vue"
+    ],
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "skipLibCheck": true,
     /* Bundler mode */
     "moduleResolution": "node",
@@ -28,7 +36,8 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/*.vue"
+    "src/*.vue",
+    "src/*.ts"
   ],
   "references": [
     {

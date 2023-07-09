@@ -2,12 +2,13 @@
  * @Author: liuxintao
  * @Date: 2023-06-04 13:25:10
  * @LastEditors: liuxintao
- * @LastEditTime: 2023-06-04 15:24:53
+ * @LastEditTime: 2023-07-09 22:26:17
  * @FilePath: /vue_vite/src/utils/globalComponents.ts
  * @Description: 使用自定义插件，注册全局组件
  */
 
 import { App, AsyncComponentLoader, Plugin, defineAsyncComponent } from 'vue'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 
 // 获取 ‘@/components’ 目录下的所有路径信息
 const components = import.meta.glob('@/components/**/*.vue')
@@ -30,6 +31,10 @@ const componentsInit = (app: App) => {
 const globalComponents: Plugin = {
   install(app) {
     componentsInit(app)
+    // 注册全部 elementplus icon 组件
+    for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+      app.component(key, component)
+    }
   },
 }
 

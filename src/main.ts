@@ -20,6 +20,8 @@ import globalComponents from './utils/globalComponents'
 import '@/style/index.scss'
 // 引入路由
 import router from './router'
+// 引入仓库
+import pinia from './store'
 
 const app = createApp(App)
 // 对elementplus组件库进行全局使用注册，并进行国际化
@@ -28,6 +30,8 @@ app.use(ElementPlus, {
 })
 // 注册路由
 app.use(router)
+// 注册仓库
+app.use(pinia)
 
 // 自定义全局组件
 app.use(globalComponents)

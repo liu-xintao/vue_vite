@@ -9,9 +9,17 @@
 <template>
   <div>
     <h1>home页</h1>
+
+    <h2>{{ count }}</h2>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useUserStore } from '@/store/users'
+
+const useStore = useUserStore()
+
+const { count } = useStore
+</script>
 
 <style scoped></style>
