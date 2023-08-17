@@ -1,15 +1,18 @@
 <!--
  * @Author: liuxintao
  * @Date: 2023-07-09 19:41:02
- * @LastEditors: liuxintao
- * @LastEditTime: 2023-07-09 22:45:35
+ * @LastEditors: liuxintao 1666135248@qq.com
+ * @LastEditTime: 2023-07-19 21:54:17
  * @FilePath: /vue_vite/src/layout/Menu/MenuItem/index.vue
  * @Description: 菜单每一项
 -->
 <template>
   <template v-for="menu in routerMeun" :key="menu.name">
     <!-- 没有 children -->
-    <el-menu-item :index="menu.path" v-if="!menu.children?.length">
+    <el-menu-item
+      :index="menu.path"
+      v-if="!menu.children?.length && !menu.meta.hideen"
+    >
       <template #title>
         <el-icon>
           <component :is="menu.meta!.icon"></component>
@@ -20,7 +23,7 @@
     <!-- children 只有一项 -->
     <el-menu-item
       :index="menu.path"
-      v-if="menu.children && menu.children.length === 1"
+      v-if="menu.children && menu.children.length === 1 && !menu.meta.hideen"
     >
       <template #title>
         <el-icon>
@@ -32,7 +35,7 @@
     <!-- children 大于一个 -->
     <el-sub-menu
       :index="menu.path"
-      v-if="menu.children && menu.children.length > 1"
+      v-if="menu.children && menu.children.length > 1 && !menu.meta.hideen"
     >
       <template #title>
         <el-icon>
